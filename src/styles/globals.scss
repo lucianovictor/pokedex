@@ -3,7 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: SF Pro Display;
+  src: url("/public/fonts/sf-pro-display-bold.ttf");
+  font-weight: 700;
+}
 
+@font-face {
+  font-family: SF Pro Display;
+  src: url("/public/fonts/sf-pro-display-medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url("/public/fonts/sf-pro-display-regular.ttf");
+  font-weight: 400;
+}
 html {
   @media (max-width: 1080px) {
     font-size: 93.75%; // 15px
@@ -14,20 +30,19 @@ html {
   }
 }
 
-:root {
-  --background: #f5f6fa;
-
-  --primary: #373D4F;
-  --secondary: #9098AE;
-}
 
 body {
-  background: var(--background);
+  background: $background-type-dark;
+  color: $text-white;
+  -webkit-font-smoothing: antialiased;
 }
 
 body, button, textarea, input {
-  color: var(--primary);
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem "SF Pro Display", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 700;
 }
 
 a {
